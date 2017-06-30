@@ -89,17 +89,17 @@ window.alert(reverseWord("MARROCOS"));
 --PL/SQL
 set serveroutput on
 declare
-  word varchar2(4000)     := 'MARROCOS';
-  new_word varchar2(4000) := null;
-  qtd number              := null;
+	word varchar2(4000)     := 'MARROCOS';
+	new_word varchar2(4000) := null;
+	qtd number              := null;
 begin
-  qtd := length(word);
+	qtd := length(word);
 
-  for i in reverse 0..qtd 
-  loop
-    new_word := new_word || substr(word, i, 1);
-  end loop;
-   dbms_output.put_line(new_word);
+	for i in reverse 0..qtd 
+	loop
+		new_word := new_word || substr(word, i, 1);
+	end loop;
+dbms_output.put_line(new_word);
 end;
 
 ```
